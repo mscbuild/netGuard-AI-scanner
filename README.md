@@ -1,6 +1,6 @@
 # NetGuard-AI 🛡️
 
-![Python Version]([img.shields.io](https://img.shields.io/badge/python-3.12%2B-blue))
+![Python Version](img.shields.io/badge/python-3.12%2B-blue)
 ![License](img.shields.io)
 ![Status](img.shields.io)
 

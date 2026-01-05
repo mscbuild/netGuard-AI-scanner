@@ -1,18 +1,28 @@
 name: Security Scan
-on: [push]
+on: [push, pull_request]
+
 jobs:
-  bandit:
+  security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Run Bandit
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
         run: |
-          pip install bandit
-          bandit -r .
-  snyk:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: snyk/actions/python@master
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          # Убеждаемся, что pandas установлен для корректного анализа Snyk
+          pip install pandas scapy
+
+      - name: Run Snyk to check for vulnerabilities
+        uses: snyk/actions/python@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --skip-unresolved --file=requirements.txt

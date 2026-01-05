@@ -41,10 +41,12 @@ netguard-ai/
    cd netguard-ai
 
 **Install dependencies:**
+
 ```bash
 pip install -r requirements.txt
 
 Run the analyzer  (requires administrator rights to access the network interface)
+
 ```bash
 sudo python main.py --interface eth0
  

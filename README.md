@@ -32,6 +32,29 @@
 - Integration with the Telegram Bot API for instant alerts.
 - Export data in JSON format for visualization in Grafana.
 
+## 🛡️ Security Audit
+
+The project is regularly checked for vulnerabilities using automated tools:
+
+- Checking with Bandit (Code Analysis)
+
+~~~bash
+pip install bandit
+bandit -r . -f txt
+~~~
+
+- Checking with Snyk (Dependency Analysis and Docker)
+
+~~~bash
+snyk test
+~~~
+
+Tool	  Status	   Findings
+Bandit		      No critical issues. Scapy usage marked as intentional.
+Snyk		         0 vulnerabilities in 4 dependencies.
+
+
+
 ## 🛡️ Disclaimer
 
 **This software is created solely for educational purposes and for use in sanctioned ethical hacking. The author assumes no liability for unauthorized use.**

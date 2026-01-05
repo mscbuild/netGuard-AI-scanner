@@ -32,7 +32,7 @@
 - Integration with the Telegram Bot API for instant alerts.
 - Export data in JSON format for visualization in Grafana.
 
-##🛡️ Disclaimer
+## 🛡️ Disclaimer
 
 **This software is created solely for educational purposes and for use in sanctioned ethical hacking. The author assumes no liability for unauthorized use.**
 

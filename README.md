@@ -50,17 +50,17 @@ netguard-ai/
 
 ## 1.Packet Capture
 
-- sniffer.py listens to network traffic and collects packet data.
+- `sniffer.py` listens to network traffic and collects packet data.
 
 ## 2.Analysis
 
-- Captured packets are passed to analyzer.py
+- Captured packets are passed to `analyzer.py`
 
-- Detection logic evaluates traffic patterns and flags anomalies.
+- Detection `logic` evaluates traffic patterns and flags anomalies.
 
 ## 3.Logging & Alerts
 
-- Suspicious events are recorded in the logs/ directory.
+- Suspicious events are recorded in the `logs/` directory.
 
 - Future versions may include real-time alerts or dashboards.
 
